@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.wiuma.astraios.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_horoscope_details"
+            app:destination="@id/navigation_horoscope_details" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_horoscope"
+        android:name="com.wiuma.astraios.ui.horoscope.HoroscopeFragment"
+        android:label="@string/title_horoscope"
+        tools:layout="@layout/fragment_horoscope" >
+        <action
+            android:id="@+id/action_navigation_horoscope_to_navigation_horoscope_details"
+            app:destination="@id/navigation_horoscope_details" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.wiuma.astraios.ui.notifications.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/navigation_horoscope_details"
+        android:name="com.wiuma.astraios.ui.horoscopeDetails.HoroscopeDetailsFragment"
+        android:label="@string/title_details"
+        tools:layout="@layout/fragment_horoscope_details" >
+        <action
+            android:id="@+id/action_navigation_horoscope_details_to_navigation_horoscope"
+            app:destination="@id/navigation_horoscope" />
+        <action
+            android:id="@+id/action_navigation_horoscope_details_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <argument
+            android:name="horoscopeId"
+            app:argType="integer" />
+    </fragment>
+
+</navigation>
