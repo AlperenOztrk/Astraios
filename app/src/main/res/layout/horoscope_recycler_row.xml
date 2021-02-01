@@ -36,7 +36,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
-                        android:text="Terazi"
                         android:textColor="@color/white"
                         android:textSize="25sp"
                         android:textStyle="bold" />
@@ -46,7 +45,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
-                        android:text="21 Ekim - 12 Kasım"
                         android:textColor="@color/white" />
 
                 </LinearLayout>
@@ -55,8 +53,7 @@
                     android:id="@+id/horoscopeSign"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:layout_weight="0.2"
-                    app:srcCompat="@drawable/libra_blue" />
+                    android:layout_weight="0.2" />
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>

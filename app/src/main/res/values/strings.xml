@@ -2,12 +2,30 @@
     <string name="app_name">Astraios</string>
     <string name="title_home">Home</string>
     <string name="title_horoscope">Horoscope List</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_profile">Profile</string>
     <string name="title_details">Details</string>
 
     <string name="welcome">Merhaba</string>
-    <string name="welcoming">Nasılsın? Bugün 23 Ekim 2021 Çarşamba.</string>
+    <string name="welcoming">Nasılsın? Bugün </string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="exit">Çıkış Yap</string>
+    <string name="update">Güncelle</string>
+    <string name="your_age">Yaşınız</string>
+    <string name="your_horoscope">Burcunuz Terazi</string>
+    <string name="your_birthday">Doğum Tarihiniz</string>
+    <string name="new_password_annotation">Yeni şifrenizi yazın.</string>
+    <string name="your_password">Şifreniz</string>
+    <string name="your_email">Mail adresiniz</string>
+    <string name="your_name">İsminiz</string>
+    <string name="save">Bilgilerimi Kaydet</string>
+    <string name="like">Beğen</string>
+    <string name="share">Paylaş</string>
+    <string name="view_more">Görüntüle</string>
+    <string name="home_details_title">Burcuna ait tüm özellikler bir arada</string>
+    <string name="home_daily_subtitle">Sana özel günlük burç yorumun.</string>
+    <string name="error_message">Bir hata oluştu.</string>
+    <string name="register">Kayıt Ol</string>
+    <string name="login">Giriş Yap</string>
 
 </resources>

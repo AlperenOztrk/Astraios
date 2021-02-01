@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "722520495514",
+    "project_id": "astraios",
+    "storage_bucket": "astraios.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:722520495514:android:f62f526198eb6e706a5623",
+        "android_client_info": {
+          "package_name": "com.wiuma.astraios"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "722520495514-e3q3u89fjg881f0dhvl6skbu0c5nppht.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvyM6UtzLqdd5_KD_rckqYY1__XpkzKJ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "722520495514-e3q3u89fjg881f0dhvl6skbu0c5nppht.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

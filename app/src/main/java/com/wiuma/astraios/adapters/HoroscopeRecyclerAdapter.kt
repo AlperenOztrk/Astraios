@@ -9,10 +9,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.wiuma.astraios.R
 import com.wiuma.astraios.models.Horoscope
 import com.wiuma.astraios.ui.horoscope.HoroscopeFragmentDirections
+import com.wiuma.astraios.utilities.createPlaceholder
+import com.wiuma.astraios.utilities.fetchImage
 import kotlinx.android.synthetic.main.horoscope_recycler_row.view.*
 
 class HoroscopeRecyclerAdapter(val horoscopeList: ArrayList<Horoscope>) :
-    RecyclerView.Adapter<HoroscopeRecyclerAdapter.HoroscopeViewHolder>() {
+        RecyclerView.Adapter<HoroscopeRecyclerAdapter.HoroscopeViewHolder>() {
     class HoroscopeViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
     }
@@ -25,14 +27,13 @@ class HoroscopeRecyclerAdapter(val horoscopeList: ArrayList<Horoscope>) :
 
     @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: HoroscopeViewHolder, position: Int) {
-        holder.itemView.horoscopeName.text = horoscopeList.get(position).nameHoroscope
+        holder.itemView.horoscopeName.text = horoscopeList[position].nameHoroscope
         holder.itemView.horoscopeDates.text =
-            horoscopeList.get(position).startDate + " " + horoscopeList.get(position).endDate
-        //TODO Gorsel baglantisi eklenecek.
-
+                horoscopeList.get(position).startDate + " - " + horoscopeList[position].endDate
+        holder.itemView.horoscopeSign.fetchImage((horoscopeList[position].signHoroscope), createPlaceholder(holder.itemView.context))
         holder.itemView.setOnClickListener {
             val action =
-                HoroscopeFragmentDirections.actionNavigationHoroscopeToNavigationHoroscopeDetails(0)
+                    HoroscopeFragmentDirections.actionNavigationHoroscopeToNavigationHoroscopeDetails(horoscopeList.get(position).Id)
             Navigation.findNavController(it).navigate(action)
         }
     }

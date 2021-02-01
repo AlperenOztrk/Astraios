@@ -23,14 +23,14 @@ class HoroscopeFragment : Fragment() {
     private lateinit var progressBar: ProgressBar
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater,
+            container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
         horoscopeViewModel =
-            ViewModelProvider(this).get(HoroscopeViewModel::class.java)
+                ViewModelProvider(this).get(HoroscopeViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_horoscope, container, false)
-        horoscopeViewModel.getDataFromAPI()
+        horoscopeViewModel.fetchData()
         errorText = root.findViewById(R.id.errorText)
         progressBar = root.findViewById(R.id.progressBar)
         horoscopeRecyclerView = root.findViewById(R.id.horoscopeRecyclerView)
@@ -45,6 +45,7 @@ class HoroscopeFragment : Fragment() {
             horoscope?.let {
                 errorText.visibility = View.GONE
                 progressBar.visibility = View.GONE
+                horoscopeRecyclerView.visibility = View.VISIBLE
                 recyclerViewAdapter.updateList(it)
             }
         })

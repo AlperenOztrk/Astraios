@@ -12,7 +12,7 @@
             android:id="@+id/errorText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Bir hata oluştu."
+            android:text="@string/error_message"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -61,7 +61,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="16dp"
-                    android:text="AlpOztuerk"
                     android:textSize="25sp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toEndOf="@+id/welcome_text"
@@ -92,7 +91,9 @@
                         android:id="@+id/imageView"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        tools:srcCompat="@drawable/ic_launcher_background" />
+                        android:background="#FDC653"
+                        app:srcCompat="@drawable/icon"
+                        tools:srcCompat="@drawable/icon" />
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
@@ -120,8 +121,7 @@
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toEndOf="@+id/textView4"
-                            app:layout_constraintTop_toBottomOf="@+id/textView4"
-                            app:srcCompat="@drawable/libra_shadow" />
+                            app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
                         <TextView
                             android:id="@+id/name"
@@ -129,7 +129,6 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
                             android:layout_marginTop="16dp"
-                            android:text="Alperen,"
                             android:textSize="25sp"
                             android:textStyle="bold"
                             app:layout_constraintStart_toStartOf="parent"
@@ -141,7 +140,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
                             android:layout_marginTop="8dp"
-                            android:text="Sana özel günlük burç yorumun."
+                            android:text="@string/home_daily_subtitle"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/name" />
 
@@ -152,33 +151,31 @@
                             android:layout_marginStart="16dp"
                             android:layout_marginTop="12dp"
                             android:layout_marginEnd="16dp"
-                            android:text="Haftanın ilk günü Güneş ile chiron arasında olumlu bir açı meydana gelecektir. Uyumlu 60 derecelik açı sadece sizlerin harekete geçmesi ile aktive olan bir açıdır. Yaralandığınız noktanın şifalanabilmesi için öncelikle sizlerin sevgi anlayışınızı, dışarıya yansıtma biçiminizi yeniden gözden geçirmeniz gerekmektedir. Sizler yenilenmek için adım attığınızda açı sizlere desteğini sunacaktır."
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.0"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
                         <ImageView
-                            android:id="@+id/horiscopeSign"
+                            android:id="@+id/horoscopeSign"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
                             android:layout_marginTop="32dp"
                             android:layout_marginEnd="16dp"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/libra" />
+                            app:layout_constraintTop_toTopOf="parent" />
 
                         <Button
                             android:id="@+id/shareButton"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="0dp"
                             android:layout_marginStart="16dp"
                             android:layout_marginTop="16dp"
                             android:layout_marginBottom="16dp"
                             android:background="@android:color/transparent"
-                            android:drawableStart="?attr/actionModeShareDrawable"
+                            android:drawableLeft="@drawable/heart"
                             android:drawableTint="@color/purple_500"
-                            android:text="Button"
+                            android:text="@string/like"
                             android:textColor="@color/black"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -192,9 +189,9 @@
                             android:layout_marginTop="16dp"
                             android:layout_marginBottom="16dp"
                             android:background="@android:color/transparent"
-                            android:drawableStart="?android:attr/fingerprintAuthDrawable"
+                            android:drawableLeft="@drawable/share"
                             android:drawableTint="@color/purple_500"
-                            android:text="Button"
+                            android:text="@string/share"
                             android:textColor="@color/black"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toEndOf="@+id/shareButton"
@@ -224,13 +221,12 @@
                         android:elevation="6sp">
 
                         <ImageView
-                            android:id="@+id/horoscopeSignMystic"
+                            android:id="@+id/horoscopeSignInk"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/libra_ink" />
+                            app:layout_constraintTop_toTopOf="parent" />
 
                         <TextView
                             android:id="@+id/textView7"
@@ -239,7 +235,7 @@
                             android:layout_marginStart="16dp"
                             android:layout_marginTop="16dp"
                             android:layout_marginEnd="50dp"
-                            android:text="Burcuna ait tüm özellikler bir arada"
+                            android:text="@string/home_details_title"
                             android:textSize="25sp"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -253,9 +249,9 @@
                             android:layout_marginTop="8dp"
                             android:layout_marginBottom="16dp"
                             android:backgroundTint="#FFFFFF"
-                            android:drawableEnd="@android:drawable/btn_star"
+                            android:drawableEnd="@drawable/eye"
                             android:drawableTint="@color/purple_500"
-                            android:text="Button"
+                            android:text="@string/view_more"
                             android:textColor="@color/black"
                             android:textSize="12sp"
                             app:layout_constraintBottom_toBottomOf="parent"
